@@ -3,7 +3,7 @@ name: Deploy Fabric Workspace
 on:
   push:
     branches:
-      - ws-taxi-data-dev  
+      - taxi-data-dev  
 
 jobs:
   deploy:
