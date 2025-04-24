@@ -20,7 +20,7 @@ print(tenant_id)
 token_credential = ClientSecretCredential(client_id=client_id, client_secret=client_secret, tenant_id=tenant_id)
 
 # Sample values for FabricWorkspace parameters
-workspace_id = os.environ.get('FABRIC_WORKSPACE_ID_MAIN')
+workspace_id = os.environ.get('FABRIC_WORKSPACE_ID')
 #environment = os.environ.get('TARGET_ENVIRONMENT_NAME')
 repository_directory = "."
 item_type_in_scope = ["Lakehouse", "Notebook"]#, "Environment"]
