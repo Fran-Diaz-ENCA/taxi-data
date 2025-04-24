@@ -1,13 +1,12 @@
-2025-04-24 15:14:08,950 - INFO - fabric_cicd._common._fabric_endpoint - Executing as Application Id '854b5a63-6fc2-424c-88d4-3c121808eff3'
-2025-04-24 15:14:08,950 - INFO - fabric_cicd._common._validate_input - Relative directory path 'fabric-items' resolved as '/home/runner/work/taxi-data/taxi-data/fabric-items'
-2025-04-24 15:14:08,954 - WARNING - fabric_cicd._parameter._parameter - spark_pool parameter is not present
-2025-04-24 15:14:08,955 - INFO - fabric_cicd._parameter._parameter - Parameter file validation passed
-2025-04-24 15:14:09,298 - INFO - fabric_cicd.fabric_workspace - Publishing Workspace Folders
-2025-04-24 15:14:09,298 - INFO - fabric_cicd.fabric_workspace - ->Published
-2025-04-24 15:14:09,688 - INFO - fabric_cicd.fabric_workspace - Publishing Notebook 'silver_yellow_taxi_tp'
-2025-04-24 15:14:12,164 - INFO - fabric_cicd.fabric_workspace - ->Published
-2025-04-24 15:14:12,164 - INFO - fabric_cicd.fabric_workspace - Publishing Notebook 'tlc_trip_system_config'
-2025-04-24 15:14:14,338 - INFO - fabric_cicd._common._fabric_endpoint - ->->Operation in progress. Checking again in 1 second (Attempt 1/5)...
-2025-04-24 15:14:16,184 - INFO - fabric_cicd.fabric_workspace - ->Published
-2025-04-24 15:14:16,595 - INFO - fabric_cicd.fabric_workspace - Unpublishing Workspace Folders
-2025-04-24 15:14:16,595 - INFO - fabric_cicd.fabric_workspace - ->Unpublished
+2025-04-24 15:29:16,484 - INFO - fabric_cicd._common._fabric_endpoint - Executing as Application Id '854b5a63-6fc2-424c-88d4-3c121808eff3'
+2025-04-24 15:29:16,485 - INFO - fabric_cicd._common._validate_input - Relative directory path 'fabric-items' resolved as '/home/runner/work/taxi-data/taxi-data/fabric-items'
+2025-04-24 15:29:16,490 - WARNING - fabric_cicd._parameter._parameter - spark_pool parameter is not present
+2025-04-24 15:29:16,490 - INFO - fabric_cicd._parameter._parameter - Parameter file validation passed
+2025-04-24 15:29:17,003 - INFO - fabric_cicd.fabric_workspace - Publishing Workspace Folders
+2025-04-24 15:29:17,003 - INFO - fabric_cicd.fabric_workspace - ->Published
+2025-04-24 15:29:17,455 - INFO - fabric_cicd.fabric_workspace - Publishing Notebook 'silver_yellow_taxi_tp'
+2025-04-24 15:29:20,121 - INFO - fabric_cicd.fabric_workspace - ->Published
+2025-04-24 15:29:20,121 - INFO - fabric_cicd.fabric_workspace - Publishing Notebook 'tlc_trip_system_config'
+2025-04-24 15:29:22,851 - INFO - fabric_cicd.fabric_workspace - ->Published
+2025-04-24 15:29:23,511 - INFO - fabric_cicd.fabric_workspace - Unpublishing Workspace Folders
+2025-04-24 15:29:23,511 - INFO - fabric_cicd.fabric_workspace - ->Unpublished
