@@ -11,7 +11,7 @@ on:
 
 jobs:
   deploy-new-fabric-workspace:
-    if: github.ref != 'refs/heads/main'  # Evita ejecutar si es la rama main
+    #if: github.ref != 'refs/heads/main'  # Evita ejecutar si es la rama main
     runs-on: ubuntu-latest
 
     steps:
