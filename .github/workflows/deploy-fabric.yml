@@ -33,6 +33,7 @@ jobs:
           FABRIC_CLIENT_SECRET: ${{ secrets.FABRIC_CLIENT_SECRET }}
           FABRIC_TENANT_ID: ${{ secrets.FABRIC_TENANT_ID }}
           FABRIC_WORKSPACE_ID: ${{ secrets.FABRIC_WORKSPACE_ID_MAIN }}
+          FABRIC_TOKEN: ${{ secrets.FABRIC_TOKEN }}
           
       - name: Commit and push updated object IDs
         run: |
