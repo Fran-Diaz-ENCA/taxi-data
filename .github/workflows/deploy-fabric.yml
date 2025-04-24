@@ -1,12 +1,16 @@
 name: Deploy Fabric Workspace
 
 on:
-  push:
+  create:
     branches:
-      - ws-taxi-data-dev  
+      - '*'  # Detecta la creación de cualquier rama
+#  push:
+#    branches:
+#      - ws-taxi-data-dev    
 
 jobs:
-  deploy:
+  deploy-new-fabric-workspace:
+    if: github.ref != 'refs/heads/main'  # Evita ejecutar si es la rama main
     runs-on: ubuntu-latest
 
     steps:
@@ -22,18 +26,26 @@ jobs:
         run: |
           pip install fabric-cicd
 
-     # - name: Deploy to Fabric
-      #  run: |
-       #   fabric-cicd deploy \
-        #    --client-id ${{ secrets.FABRIC_CLIENT_ID }} \
-         #   --client-secret ${{ secrets.FABRIC_CLIENT_SECRET }} \
-          #  --tenant-id ${{ secrets.FABRIC_TENANT_ID }} \
-          #  --workspace-id ${{ secrets.FABRIC_WORKSPACE_ID }} \
-           # --folder ./workspace-artifacts
-
-      - name: Mostrar nombres de los secrets (sin revelar valores)
+      - name: Run Python ID update script
+        run: python ./scripts/auth_spn_secret.py
+        env:
+          FABRIC_CLIENT_ID: ${{ secrets.FABRIC_CLIENT_ID }}
+          FABRIC_CLIENT_SECRET: ${{ secrets.FABRIC_CLIENT_SECRET }}
+          FABRIC_TENANT_ID: ${{ secrets.FABRIC_TENANT_ID }}
+          FABRIC_WORKSPACE_ID: ${{ secrets.FABRIC_WORKSPACE_ID }}
+          
+      - name: Commit and push updated object IDs
         run: |
-          echo "✅ FABRIC_CLIENT_ID: ${{ secrets.FABRIC_CLIENT_ID }}"
-          echo "✅ FABRIC_CLIENT_SECRET: ${{ secrets.FABRIC_CLIENT_SECRET }}"
-          echo "✅ FABRIC_TENANT_ID: ${{ secrets.FABRIC_TENANT_ID }}"
-          echo "✅ FABRIC_WORKSPACE_ID: ${{ secrets.FABRIC_WORKSPACE_ID }}"
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "Actualizamos los IDS de los objetos después de crear la rama"
+          git push
+
+
+#     - name: Mostrar nombres de los secrets (sin revelar valores)
+#        run: |
+#          echo "✅ FABRIC_CLIENT_ID: ${{ secrets.FABRIC_CLIENT_ID }}"
+#          echo "✅ FABRIC_CLIENT_SECRET: ${{ secrets.FABRIC_CLIENT_SECRET }}"
+#          echo "✅ FABRIC_TENANT_ID: ${{ secrets.FABRIC_TENANT_ID }}"
+#          echo "✅ FABRIC_WORKSPACE_ID: ${{ secrets.FABRIC_WORKSPACE_ID }}"
