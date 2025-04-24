@@ -17,7 +17,7 @@ tenant_id = os.environ.get('FABRIC_TENANT_ID')
 print(client_id)
 print(client_secret)
 print(tenant_id)
-token_credential = ClientSecretCredential(client_id=client_id, client_secret=client_secret, tenant_id=tenant_id)
+token_credential = os.environ.get('FABRIC_TOKEN') #ClientSecretCredential(client_id=client_id, client_secret=client_secret, tenant_id=tenant_id)
 
 # Sample values for FabricWorkspace parameters
 workspace_id = os.environ.get('FABRIC_WORKSPACE_ID')
