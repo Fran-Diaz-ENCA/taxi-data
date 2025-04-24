@@ -22,7 +22,7 @@ token_credential = ClientSecretCredential(client_id=client_id, client_secret=cli
 # Sample values for FabricWorkspace parameters
 workspace_id = os.environ.get('FABRIC_WORKSPACE_ID')
 environment = "PROD" #os.environ.get('TARGET_ENVIRONMENT_NAME')
-repository_directory = "./fabric-items"
+repository_directory = "."
 item_type_in_scope = ["Lakehouse", "Notebook"]#, "Environment"]
 
 # Paramos 1 minuto antes de cambiar los ids.
