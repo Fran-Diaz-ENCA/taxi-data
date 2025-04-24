@@ -1,9 +1,10 @@
 name: Deploy Fabric Workspace
 
 on:
-  create:
-    branches:
-      - '*'  # Detecta la creación de cualquier rama
+  workflow_dispatch:
+#  create:
+#    branches:
+#      - '*'  # Detecta la creación de cualquier rama
 #  push:
 #    branches:
 #      - ws-taxi-data-dev    
