@@ -3,4 +3,4 @@ find_replace:
     - find_value: "f0225bed-f40c-4634-bac5-a1b4e4af9594"
       replace_value:
        # PPE: "$ENV:ppe_lakehouse"
-        PROD: "4bc9add6-b2d0-4dc7-8688-cc99ac062d28"
+        PROD: "6873a5b9-ead9-422e-9587-a96f0a3748b6"
