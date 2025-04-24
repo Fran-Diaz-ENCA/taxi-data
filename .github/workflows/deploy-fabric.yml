@@ -9,6 +9,9 @@ on:
 #    branches:
 #      - ws-taxi-data-dev    
 
+permissions:
+  contents: write  # NECESARIO para permitir el push
+
 jobs:
   deploy-new-fabric-workspace:
     #if: github.ref != 'refs/heads/main'  # Evita ejecutar si es la rama main
@@ -42,6 +45,7 @@ jobs:
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git add .
           git commit -m "Actualizamos los IDS de los objetos después de crear la rama"
+          git remote set-url origin https://x-access-token:${{ secrets.FABRIC_GITHUB_TOKEN }}@github.com/Fran-Diaz-ENCA/taxi-data.git
           git push
 
 
