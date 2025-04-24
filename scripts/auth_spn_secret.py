@@ -14,6 +14,9 @@ from fabric_cicd import FabricWorkspace, publish_all_items, unpublish_all_orphan
 client_id = os.environ.get('FABRIC_CLIENT_ID')
 client_secret = os.environ.get('FABRIC_CLIENT_SECRET')
 tenant_id = os.environ.get('FABRIC_TENANT_ID')
+print(client_id)
+print(client_secret)
+print(tenant_id)
 token_credential = ClientSecretCredential(client_id=client_id, client_secret=client_secret, tenant_id=tenant_id)
 
 # Sample values for FabricWorkspace parameters
