@@ -8,12 +8,12 @@
 # META   },
 # META   "dependencies": {
 # META     "lakehouse": {
-# META       "default_lakehouse": "f0225bed-f40c-4634-bac5-a1b4e4af9594",
+# META       "default_lakehouse": "6873a5b9-ead9-422e-9587-a96f0a3748b6",
 # META       "default_lakehouse_name": "lh_taxi_data",
 # META       "default_lakehouse_workspace_id": "00c05ec9-97b8-47d0-9d6a-3776e00b613d",
 # META       "known_lakehouses": [
 # META         {
-# META           "id": "f0225bed-f40c-4634-bac5-a1b4e4af9594"
+# META           "id": "6873a5b9-ead9-422e-9587-a96f0a3748b6"
 # META         }
 # META       ]
 # META     }
