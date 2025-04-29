@@ -38,6 +38,16 @@ jobs:
           FABRIC_TENANT_ID: ${{ secrets.FABRIC_TENANT_ID }}
           FABRIC_WORKSPACE_ID: ${{ secrets.FABRIC_WORKSPACE_ID_MAIN }}
           FABRIC_TOKEN: ${{ secrets.FABRIC_TOKEN }}
+
+      - name: Run Python commit in Fabric
+        run: python ./scripts/fabric-api-git.py
+        env:
+          FABRIC_CLIENT_ID: ${{ secrets.FABRIC_CLIENT_ID }}
+          FABRIC_CLIENT_SECRET: ${{ secrets.FABRIC_CLIENT_SECRET }}
+          FABRIC_TENANT_ID: ${{ secrets.FABRIC_TENANT_ID }}
+          FABRIC_WORKSPACE_ID: ${{ secrets.FABRIC_WORKSPACE_ID_MAIN }}
+          FABRIC_TOKEN: ${{ secrets.FABRIC_TOKEN }}
+          USER_GITHUB: $ {{ github.actor }}
           
 #      - name: Commit and push updated object IDs
 #        run: |
